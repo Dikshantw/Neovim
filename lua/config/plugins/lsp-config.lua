@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls" },
+        ensure_installed = { "lua_ls", "ts_ls", "tailwindcss" },
       })
     end,
   },
@@ -22,6 +22,7 @@ return {
         capabilities = capabilities,
       })
       lspconfig.ts_ls.setup({ capabilities = capabilities })
+      lspconfig.tailwindcss.setup({ capabilities = capabilities })
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
