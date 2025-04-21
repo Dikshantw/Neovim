@@ -16,12 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    --	{"folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end},
-    -- { "rebelot/kanagawa.nvim",  config = function() vim.cmd.colorscheme "kanagawa-dragon" end },
-    { "EdenEast/nightfox.nvim", config = function() vim.cmd.colorscheme "carbonfox" end },
-    -- add LazyVim and import its plugins
-    --  { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import/override with your plugins
     { import = "config.plugins" },
   },
 })

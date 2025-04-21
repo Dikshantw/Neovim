@@ -22,6 +22,7 @@ return {
           cwd = vim.fn.stdpath("config"),
         })
       end)
+      vim.keymap.set("n", "<leader><leader>", require("telescope.builtin").oldfiles)
       require("config.telescope.multigrep").setup()
     end,
   },
